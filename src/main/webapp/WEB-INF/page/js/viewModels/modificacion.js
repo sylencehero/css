@@ -5,14 +5,14 @@
  */
 
 /**
- * inventario module
+ * Modificacion module
  */
 define(['ojs/ojcore', 'knockout'
 ], function (oj, ko) {
     /**
      * The view model for the main content view template
      */
-    function inventarioContentViewModel() {
+    function ModificacionContentViewModel() {
         var self = this;
         self.firstName = ko.observable("Planet");
         self.lastName = ko.observable("Earth");
@@ -21,5 +21,5 @@ define(['ojs/ojcore', 'knockout'
         }, this);
     }
     
-    return inventarioContentViewModel;
+    return ModificacionContentViewModel;
 });

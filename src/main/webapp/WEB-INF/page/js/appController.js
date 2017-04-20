@@ -20,19 +20,22 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
        // Router setup
        self.router = oj.Router.rootInstance;
        self.router.configure({
-         'ventas': {label: 'Ventas', isDefault: true},
-         'compras': {label: 'Compras'},
-         'inventario': {label: 'Inventario'}
+         'alta': {label: 'Alta', isDefault: true},
+         'baja': {label: 'Baja'},
+         'modificacion': {label: 'Modificacion'},
+         'consulta': {label: 'Consulta'}
        });
       oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
 
       // Navigation setup
       var navData = [
-      {name: 'Ventas', id: 'ventas',
+      {name: 'Alta', id: 'alta',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
-      {name: 'Compras', id: 'compras',
+      {name: 'Baja', id: 'baja',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
-      {name: 'Inventario', id: 'inventario',
+      {name: 'Modificacion', id: 'modificacion',
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
+      {name: 'Consulta', id: 'consulta',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24'}
       ];
       self.navDataSource = new oj.ArrayTableDataSource(navData, {idAttribute: 'id'});
@@ -58,7 +61,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
 
       // Header
       // Application Name used in Branding Area
-      self.appName = ko.observable("PV");
+      self.appName = ko.observable("CSS");
       // User Info used in Global Navigation area
       self.userLogin = ko.observable("john.hancock@oracle.com");
 
